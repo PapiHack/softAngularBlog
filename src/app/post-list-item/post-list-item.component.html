@@ -1,0 +1,16 @@
+<div href="#" [ngClass]="{'list-group-item': true, 
+                        'clearfix': true, 
+                        'list-group-item-success': post.getPostColor().success,
+                        'list-group-item-danger': post.getPostColor().danger }">
+    <div class="">
+      <h4 class="list-group-item-heading"> {{ post.title }} 
+        <span class="pull-right"> {{ post.createdAt | date:'short' }} </span>
+      </h4> 
+      
+      <p class="list-group-item-text"> {{ post.content }} </p>    
+    </div> <br/>
+    <span class="">
+      <button class="btn btn-success" (click)="loveIt(post)">LoveIts</button> &nbsp;
+      <button class="btn btn-danger" (click)="dontLoveIt(post)">DontLoveIts</button>
+    </span>
+  </div>
